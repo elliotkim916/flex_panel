@@ -1,0 +1,82 @@
+body {
+  font-family: 'Muli';
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.panel1 {
+  background: url('images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel2 {
+  background: url('images/2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel3 {
+  background: url('images/3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel4 {
+  background: url('images/4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel5 {
+  background: url('images/5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.panels {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  text-align: center;
+  flex: 1; /* This evenly distributes the remaining space among each panel*/
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition:
+    font-size 0.7s,
+    flex 0.7s,
+    background 0.2s
+}
+
+/* flex children */
+.panel > * {
+  transition: transform 0.5s;
+  /* border: 1px solid red; */
+  width: 100%;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel.open {
+  flex: 5; /* Will take 5 times the amount of extra room as the rest of the panels */
+  font-size: 40px;
+}
