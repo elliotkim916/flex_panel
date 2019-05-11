@@ -1,4 +1,4 @@
-# ** Flex Panel**
+# **Flex Panel**
 Click on an image to see the individual image widen while the other images shrink
 
 ## **Live Demo**
