@@ -49,10 +49,10 @@ body {
 
 .panel {
   text-align: center;
-  flex: 1; /* This evenly distributes the remaining space among each panel*/
+  flex: 1; /* This evenly distributes the remaining space among each panel */
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   flex-direction: column;
   transition:
     font-size 0.7s,
@@ -60,15 +60,15 @@ body {
     background 0.2s
 }
 
-/* flex children */
+/* all the children of .panel */
 .panel > * {
   transition: transform 0.5s;
   /* border: 1px solid red; */
   width: 100%;
-  flex: 1 0 auto;
+  flex: 1 0 auto; /* flex sets the flexible length on flex items */
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
 }
 
 .panel > *:first-child { transform: translateY(-100%); }
